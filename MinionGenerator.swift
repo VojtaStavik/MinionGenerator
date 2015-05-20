@@ -95,7 +95,7 @@ struct MinionGenerator: GeneratorType {
     
     static func randomPicture() -> UIImage {
         
-        return UIImage(data: NSData(contentsOfFile: pathForLocalPicture(randomImageNames.randomItem()))!)!
+        return UIImage(data: NSData(contentsOfFile: pathForLocalPicture(randomImageNames.randomItem()))!, scale: UIScreen.mainScreen().scale)!
     }
     
     
