@@ -105,6 +105,23 @@ struct MinionGenerator: GeneratorType {
     }
     
     
+    static func randomPictures(count: Int) -> [UIImage] {
+        
+        return createSmartArray(count, randomElement: { () -> UIImage in
+            
+            self.randomPicture()
+        })
+    }
+
+    
+    static func randomPictureURLs(count: Int) -> [NSURL] {
+        
+        return createSmartArray(count, randomElement: { () -> NSURL in
+            
+            self.randomPrictureURL()
+        })
+    }
+
     
     // MARK: - Private functions
     
