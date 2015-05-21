@@ -23,6 +23,10 @@
 
 ### Example
 
+Add this repository as a Git submodule to your project and import ```MinionGenerator.swift``` file to your project. **Don't copy it.**
+
+Usage:
+
 	let minion = MinionGenerator.randomMinion()
 	let arrayOfMinions = MinionGenerator.minions(15)
 	
