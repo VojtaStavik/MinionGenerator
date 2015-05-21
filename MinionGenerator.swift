@@ -136,7 +136,7 @@ struct MinionGenerator: GeneratorType {
     
     private static func urlForPicture(name: String) -> NSURL {
         
-        return NSURL(string: "https://raw.githubusercontent.com/VojtaStavik/MinionGenerator/master/images/" + name + ".jpg")!
+        return NSURL(string: ("https://raw.githubusercontent.com/VojtaStavik/MinionGenerator/master/images/" + name + ".jpg").lowercaseString)!
     }
     
     
