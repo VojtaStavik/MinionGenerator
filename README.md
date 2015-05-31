@@ -23,7 +23,7 @@
 
 ### Example
 
-Add this repository as a Git submodule to your project and import ```MinionGenerator.swift``` file to your project. **Don't copy it.**
+Add this repository as a Git submodule to your project and import ```MinionGenerator.swift``` and ```Minions.xcassets``` files to your project. **Don't copy it.**
 
 Usage:
 
