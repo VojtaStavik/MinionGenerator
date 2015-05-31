@@ -22,11 +22,7 @@ struct MinionGenerator: GeneratorType {
             self.name = name
             self.profilePictureURL = MinionGenerator.urlForPicture(name)
             
-            if let
-                
-                profilePictureData = NSData(contentsOfFile: MinionGenerator.pathForLocalPicture(name)),
-                profilePicture = UIImage(data: profilePictureData, scale: UIScreen.mainScreen().scale)
-            {
+            if let profilePicture = UIImage(named: name.lowercaseString) {
                 
                 self.profilePicture = profilePicture
             }
@@ -95,7 +91,7 @@ struct MinionGenerator: GeneratorType {
     
     static func randomPicture() -> UIImage {
         
-        return UIImage(data: NSData(contentsOfFile: pathForLocalPicture(randomImageNames.randomItem()))!, scale: UIScreen.mainScreen().scale)!
+        return UIImage(named: randomImageNames.randomItem())!
     }
     
     
