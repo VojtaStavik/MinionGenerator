@@ -1,47 +1,65 @@
 //
 //  MinionGenerator.swift
 //
-//  Created by Vojta Stavik on 20/05/15.
+//  Created by Vojta Stavik - www.vojtastavik.com
 //  Copyright (c) 2015 STRV. All rights reserved.
 //
+//  Permission is hereby granted, free of charge, to any person obtaining a copy
+//  of this software and associated documentation files (the "Software"), to deal
+//  in the Software without restriction, including without limitation the rights
+//  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+//  copies of the Software, and to permit persons to whom the Software is
+//  furnished to do so, subject to the following conditions:
+//
+//  The above copyright notice and this permission notice shall be included in
+//  all copies or substantial portions of the Software.
+//
+//  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+//  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+//  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+//  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+//  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+//  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+//  THE SOFTWARE.
+//
+
 
 import UIKit
 import Foundation
 
-struct MinionGenerator: GeneratorType {
+public class Minion: Equatable {
     
-    class Minion: Equatable {
-
-        let name: String
-        let profilePicture: UIImage
-        let profilePictureURL: NSURL
+    public let name: String
+    public let profilePicture: UIImage
+    public let profilePictureURL: NSURL
+    
+    
+    public init?(name: String) {
         
+        self.name = name
+        self.profilePictureURL = MinionGenerator.urlForPicture(name)
         
-        init?(name: String) {
+        if let profilePicture = UIImage(named: name.lowercaseString, inBundle: NSBundle(forClass: self.dynamicType), compatibleWithTraitCollection: nil) {
             
-            self.name = name
-            self.profilePictureURL = MinionGenerator.urlForPicture(name)
+            self.profilePicture = profilePicture
+        }
             
-            if let profilePicture = UIImage(named: name.lowercaseString) {
-                
-                self.profilePicture = profilePicture
-            }
+        else {
             
-            else {
-                
-                profilePicture = UIImage()
-                
-                return nil
-            }
+            profilePicture = UIImage()
+            return nil
         }
     }
-    
+}
+
+
+public struct MinionGenerator: GeneratorType {
     
     // GeneratorType protocol
     
-    typealias Element = Minion
+    public typealias Element = Minion
     
-    func next() -> Element? {
+    public func next() -> Element? {
         
         return self.dynamicType.randomMinion()
     }
@@ -50,19 +68,19 @@ struct MinionGenerator: GeneratorType {
     
     // Random minions
     
-    static func randomMinion() -> Minion {
+    public static func randomMinion() -> Minion {
         
         return Minion(name: randomMinionName())!
     }
     
     
-    static func randomMinionName() -> String {
+    public static func randomMinionName() -> String {
         
         return knownMinions.randomItem()
     }
     
     
-    static func minions(count: Int) -> [Minion] {
+    public static func minions(count: Int) -> [Minion] {
         
         return createSmartArray(count, randomElement: { () -> Minion in
             
@@ -74,13 +92,13 @@ struct MinionGenerator: GeneratorType {
     
     // Other assets
     
-    static func randomSentence() -> String {
+    public static func randomSentence() -> String {
         
         return randomParagraph(1)
     }
     
     
-    static func randomParagraph(sentences: Int) -> String {
+    public static func randomParagraph(sentences: Int) -> String {
         
         return ". ".join(createSmartArray(sentences, randomElement: { () -> String in
             
@@ -89,19 +107,19 @@ struct MinionGenerator: GeneratorType {
     }
     
     
-    static func randomPicture() -> UIImage {
+    public static func randomPicture() -> UIImage {
         
         return UIImage(named: randomImageNames.randomItem())!
     }
     
     
-    static func randomPrictureURL() -> NSURL {
+    public static func randomPrictureURL() -> NSURL {
         
         return urlForPicture(randomImageNames.randomItem())
     }
     
     
-    static func randomPictures(count: Int) -> [UIImage] {
+    public static func randomPictures(count: Int) -> [UIImage] {
         
         return createSmartArray(count, randomElement: { () -> UIImage in
             
@@ -110,7 +128,7 @@ struct MinionGenerator: GeneratorType {
     }
 
     
-    static func randomPictureURLs(count: Int) -> [NSURL] {
+    public static func randomPictureURLs(count: Int) -> [NSURL] {
         
         return createSmartArray(count, randomElement: { () -> NSURL in
             
@@ -120,16 +138,7 @@ struct MinionGenerator: GeneratorType {
 
     
     // MARK: - Private functions
-    
-    private static func pathForLocalPicture(name: String) -> String {
-        
-        let filePath = __FILE__
-        let currentDirectoryPath = filePath.substringToIndex(advance(filePath.endIndex, -count("MinionGenerator.swift")))
 
-        return currentDirectoryPath + "images/" + name + ".jpg"
-    }
-
-    
     private static func urlForPicture(name: String) -> NSURL {
         
         return NSURL(string: ("https://raw.githubusercontent.com/VojtaStavik/MinionGenerator/master/images/" + name + ".jpg").lowercaseString)!
@@ -201,7 +210,7 @@ struct MinionGenerator: GeneratorType {
 }
 
 
-func ==<T: MinionGenerator.Minion> (lhs:T, rhs:T) -> Bool {
+public func ==<T: Minion> (lhs:T, rhs:T) -> Bool {
     
     return lhs.name == rhs.name
 }

@@ -1,0 +1,318 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A57FD58A1B72225F00B20C29 /* MinionGenerator.h in Headers */ = {isa = PBXBuildFile; fileRef = A57FD5891B72225F00B20C29 /* MinionGenerator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A58608FF1B7223F200DDDCFF /* MinionGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58608EB1B7223F200DDDCFF /* MinionGenerator.swift */; };
+		A58609001B7223F200DDDCFF /* Minions.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A58608EC1B7223F200DDDCFF /* Minions.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A57FD5841B72225F00B20C29 /* MinionGenerator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MinionGenerator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A57FD5881B72225F00B20C29 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A57FD5891B72225F00B20C29 /* MinionGenerator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MinionGenerator.h; sourceTree = "<group>"; };
+		A57FD5951B72225F00B20C29 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A57FD5961B72225F00B20C29 /* MinionGeneratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinionGeneratorTests.swift; sourceTree = "<group>"; };
+		A58608EB1B7223F200DDDCFF /* MinionGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MinionGenerator.swift; sourceTree = "<group>"; };
+		A58608EC1B7223F200DDDCFF /* Minions.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Minions.xcassets; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A57FD5801B72225F00B20C29 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A57FD57A1B72225F00B20C29 = {
+			isa = PBXGroup;
+			children = (
+				A57FD5861B72225F00B20C29 /* MinionGenerator */,
+				A57FD5931B72225F00B20C29 /* MinionGeneratorTests */,
+				A57FD5851B72225F00B20C29 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A57FD5851B72225F00B20C29 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A57FD5841B72225F00B20C29 /* MinionGenerator.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A57FD5861B72225F00B20C29 /* MinionGenerator */ = {
+			isa = PBXGroup;
+			children = (
+				A57FD5891B72225F00B20C29 /* MinionGenerator.h */,
+				A58608EB1B7223F200DDDCFF /* MinionGenerator.swift */,
+				A58608EC1B7223F200DDDCFF /* Minions.xcassets */,
+				A57FD5871B72225F00B20C29 /* Supporting Files */,
+			);
+			path = MinionGenerator;
+			sourceTree = "<group>";
+		};
+		A57FD5871B72225F00B20C29 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A57FD5881B72225F00B20C29 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A57FD5931B72225F00B20C29 /* MinionGeneratorTests */ = {
+			isa = PBXGroup;
+			children = (
+				A57FD5961B72225F00B20C29 /* MinionGeneratorTests.swift */,
+				A57FD5941B72225F00B20C29 /* Supporting Files */,
+			);
+			path = MinionGeneratorTests;
+			sourceTree = "<group>";
+		};
+		A57FD5941B72225F00B20C29 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A57FD5951B72225F00B20C29 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		A57FD5811B72225F00B20C29 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A57FD58A1B72225F00B20C29 /* MinionGenerator.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		A57FD5831B72225F00B20C29 /* MinionGenerator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A57FD59A1B72225F00B20C29 /* Build configuration list for PBXNativeTarget "MinionGenerator" */;
+			buildPhases = (
+				A57FD57F1B72225F00B20C29 /* Sources */,
+				A57FD5801B72225F00B20C29 /* Frameworks */,
+				A57FD5811B72225F00B20C29 /* Headers */,
+				A57FD5821B72225F00B20C29 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MinionGenerator;
+			productName = MinionGenerator;
+			productReference = A57FD5841B72225F00B20C29 /* MinionGenerator.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A57FD57B1B72225F00B20C29 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = STRV;
+				TargetAttributes = {
+					A57FD5831B72225F00B20C29 = {
+						CreatedOnToolsVersion = 6.4;
+					};
+				};
+			};
+			buildConfigurationList = A57FD57E1B72225F00B20C29 /* Build configuration list for PBXProject "MinionGenerator" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = A57FD57A1B72225F00B20C29;
+			productRefGroup = A57FD5851B72225F00B20C29 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A57FD5831B72225F00B20C29 /* MinionGenerator */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A57FD5821B72225F00B20C29 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A58609001B7223F200DDDCFF /* Minions.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A57FD57F1B72225F00B20C29 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A58608FF1B7223F200DDDCFF /* MinionGenerator.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		A57FD5981B72225F00B20C29 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		A57FD5991B72225F00B20C29 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A57FD59B1B72225F00B20C29 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = MinionGenerator/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		A57FD59C1B72225F00B20C29 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = MinionGenerator/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A57FD57E1B72225F00B20C29 /* Build configuration list for PBXProject "MinionGenerator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A57FD5981B72225F00B20C29 /* Debug */,
+				A57FD5991B72225F00B20C29 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A57FD59A1B72225F00B20C29 /* Build configuration list for PBXNativeTarget "MinionGenerator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A57FD59B1B72225F00B20C29 /* Debug */,
+				A57FD59C1B72225F00B20C29 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A57FD57B1B72225F00B20C29 /* Project object */;
+}
