@@ -21,9 +21,13 @@
 
 
 
-### Example
+### How to use it
 
-Add this repository as a Git submodule to your project and import ```MinionGenerator.swift``` and ```Minions.xcassets``` files to your project. **Don't copy it.**
+The preferable way how to install MinionGenerator is by using [Carthage](https://github.com/Carthage/Carthage). Add this line to your ```Cartfile```
+
+    github "VojtaStavik/MinionGenerator"
+    
+
 
 Usage:
 
